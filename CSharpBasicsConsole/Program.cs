@@ -13,6 +13,8 @@ Console.WriteLine("What is your least favorite day of the week?");
 
 string? day = Console.ReadLine();
 
+//I'm making a change
+
 while (String.IsNullOrWhiteSpace(day))
 {
     Console.WriteLine("Please!! Enter your least favorite day of the week: ");
