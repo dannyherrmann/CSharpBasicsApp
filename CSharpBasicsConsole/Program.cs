@@ -1,45 +1,41 @@
-﻿Console.WriteLine("What is your name?");
+﻿using CSharpBasicsConsole;
 
-string? name = Console.ReadLine();
+UserInput userInput = new UserInput();
 
-while (String.IsNullOrWhiteSpace(name))
+Console.WriteLine("What is your name?");
+
+userInput.Name = Console.ReadLine();
+
+while (String.IsNullOrWhiteSpace(userInput.Name))
 {
     Console.WriteLine("Please!! Enter a name: ");
-    name = Console.ReadLine();
+    userInput.Name = Console.ReadLine();
 }
 Console.Clear();
 
 Console.WriteLine("What is your least favorite day of the week?");
 
-string? day = Console.ReadLine();
+userInput.Day = Console.ReadLine();
 
-//I'm making a change
-
-while (String.IsNullOrWhiteSpace(day))
+while (String.IsNullOrWhiteSpace(userInput.Day))
 {
     Console.WriteLine("Please!! Enter your least favorite day of the week: ");
-    day = Console.ReadLine();
+    userInput.Day = Console.ReadLine();
 }
 Console.Clear();
 
 Console.WriteLine("What is your least favorite school subject?");
 
-string? subject = Console.ReadLine();
+userInput.Subject = Console.ReadLine();
 
-while (String.IsNullOrWhiteSpace(subject))
+while (String.IsNullOrWhiteSpace(userInput.Subject))
 {
     Console.WriteLine("Please!! least favorite school subject: ");
-    subject = Console.ReadLine();
+    userInput.Subject = Console.ReadLine();
 }
 Console.Clear();
 
-
-string displayText = @$"
-Name: {name}
-Favorite Day of the Week: {day}
-Least Favorite School Subject: {subject}";
-
-Console.WriteLine(displayText);
+Console.Write(userInput);
 
 Console.ReadLine();
 
