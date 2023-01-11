@@ -24,6 +24,8 @@ while (String.IsNullOrWhiteSpace(userInput.Day))
 }
 Console.Clear();
 
+//I'm making an update in Linux
+
 Console.WriteLine("What is your least favorite school subject?");
 
 userInput.Subject = Console.ReadLine();
